@@ -1,0 +1,14 @@
+body{
+ background-color: brown;   
+}
+.mynavbar
+{
+    background-color:crimson;
+    height: 2000px;
+}
+
+#skills
+{
+    display:flex;
+    justify-content: center;
+}
