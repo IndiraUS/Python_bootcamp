@@ -1,14 +1,36 @@
-body{
- background-color: brown;   
-}
-.mynavbar
+*
 {
-    background-color:crimson;
-    height: 2000px;
+    margin: 0;
+    padding:0;
 }
 
-#skills
+/* Nav Bar   */
+
+.navbar-nav
 {
-    display:flex;
-    justify-content: center;
+    font-size: 18px;
+}
+
+/* To keep Navbar Fixed while Scrolling */
+
+.navbar{
+    position: sticky;
+    top:0;
+    z-index: 1;
+}
+
+/* Progress Bar */
+
+.progress{
+    height: 30px;
+    border-radius: 50px;
+    transition:all 0.5s ease;
+}
+
+.progress:hover{
+    transform: scale(1.1);
+}
+
+.btn:hover{
+    color: white;
 }
