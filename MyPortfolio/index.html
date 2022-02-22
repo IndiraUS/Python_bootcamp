@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <link rel="stylesheet" src="style.css">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!--    Manual CSS    -->
+    
+
+    <title>Portfolio</title>
+  </head>
+  <body>
+
+    <!--   Nav Bar  -->
+    <div class="mynavbar" >
+    <ul class="nav justify-content-end" id="navbar">
+        <li class="nav-item">
+          <a class="nav-link active" aria-current="page" href="#">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#AboutMe">About</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#Skills">Skills</a>
+        </li>
+        <li class="nav-item">
+            <a class="nav-link" href="#Experience">Experience</a>
+          </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#ContactMe">Contact Me</a>
+        </li>
+      </ul>
+    </div>
+      <br><br>
+
+
+     <!--   About Me Section  -->
+
+     <div id="AboutMe" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#AboutMe" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#AboutMe" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#AboutMe" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="images/AboutMe.jpeg" class="d-block w-100" height="500px" alt="Facts About Me">
+          </div>
+          <div class="carousel-item">
+            <img src="images/achievments.jpeg"  class="d-block w-100" height="500px alt="Achiements">
+          </div>
+          <div class="carousel-item">
+            <img src="images/quote.jpeg" class="d-block w-100" height="500px alt="I Beleive">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#AboutMe" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#AboutMe" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+      <br><br>
+ 
+        <!--      Skills Session      -->
+       <div class="container">
+        <div class="card d-flex-justify-content-center" id="Skills" width="40%">
+           <div class="card-header">
+              Skills
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">PYTHON</li>
+              <li class="list-group-item">HTML</li>
+              <li class="list-group-item">CSS</li>
+              <li class="list-group-item">JAVA SCRIPT</li>
+            </ul>
+            <button type="button" class="btn btn-outline-success">Download CV</button>
+          </div>
+        </div>
+          <br><br>  
+
+        <!--   Experience Session   -->
+
+        <div class="card-group" id="Experience">
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Telecom/C++/Unix</h5>
+                <p class="card-text">Worked in Telecommunication Domain for couple of years.</p>
+                <p class="card-text">C/C++/Unix Technologies.</p>
+                <p class="card-text"><small class="text-muted">Career Break, Shifting to Web Deveolpment</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">The World of  Web</h5>
+                <p class="card-text">My Journey Started with A Boot-Camp</p>
+                <p class="card-text"><small class="text-muted">Full Stack Python Boot Camp</small></p>
+              </div>
+            </div>
+            <div class="card">
+              <img src="..." class="card-img-top" alt="...">
+              <div class="card-body">
+                <h5 class="card-title">Python/Django/Flask- html/css/java script</h5>
+                <p class="card-text">Terminal Library Project</p>
+                <p class="card-text"><small class="text-muted">Going Ahead.....</small></p>
+              </div>
+            </div>
+          </div>
+          <br><br>
+
+    <!--    Contact me Section      -->
+
+    <div class="card" id="ContactMe">
+        <div class="card-header">
+          Contact Me
+        </div>
+        <div class="card-body">
+          <h5 class="card-title">Get in Touch !</h5>
+          <p class="card-text">Email : usindira@gmail.com</p>
+          <p class="card-text">Phone : +91 9739274688</p>
+          <a href="#MessageMe" class="btn btn-outline-success">Message Me</a>
+        </div>
+      </div>  
+      <br><br><br><br>  
+
+    <!-- Message Me Section   -->
+
+        <div id="MessageMe" class="mb-3">
+            <label for="exampleFormControlTextarea1" class="form-label">Type Your Message</label>
+            <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+            <button type="submit" class="btn btn-outline-success btn-lg">Send Your Message</button>
+          </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+
+    
+  </body>
+</html>
