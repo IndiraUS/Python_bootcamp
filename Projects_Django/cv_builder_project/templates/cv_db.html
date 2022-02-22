@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Load an icon library -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+    <style>
+      body{
+              background-color:lightyellow;
+      }
+        caption{
+            color:rebeccapurple;
+            font-size: 25px;
+            font-weight:bold;
+            font-family:'Times New Roman', Times, serif;
+
+        }
+        table{
+               margin-top:50px;
+               margin-left: 250px;
+        }
+        table, th, td {
+          border:5px solid black;
+          border-collapse: collapse;
+        }
+        th{
+            background-color: cornflowerblue;
+        }
+        td{
+            text-align: center;
+        }
+ /* Style the sidebar - fixed full height */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:cadetblue;
+    overflow-x: hidden;
+    padding-top: 16px;
+  }
+  
+  /* Style sidebar links */
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 50px;
+    color:black;
+    display: block;
+  }
+  
+  /* Style links on mouse-over */
+  .sidebar a:hover {
+    color:antiquewhite;
+  }
+  
+  /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+</style>
+<title>Resumes Data Base</title>
+</head>
+<body>
+<!-- The sidebar -->
+<div class="sidebar">
+  <a href="{% url 'index' %}"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="{% url 'create_cv' %}"><i class="fa fa-fw fa-wrench"></i> Create Resume</a>
+  <a href="{% url 'view_cv_database' %}"><i class="fa fa-fw fa-user"></i> Resume DB</a>
+  <a href="{% url 'contact_developer' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+</div>
+    <div class="form-db">
+    <form>
+    {% csrf_token %}
+        <table style="width:80%">
+            <caption>Resume Data base</caption>   
+            <tr>
+              <th>SELECT CV</th>
+              <th>NAME</th>
+              <th>EMAIL</th>
+              <th>PHONE</th>
+              <th>CV TEMPLATE</th>
+              <th>CREATED ON</th>
+              <th>OPERATIONS</th>
+            </tr>
+            {% for resume_i in resumes %}
+            <tr>
+              <td><a href="{% url 'render_context_to_cv' resume_i.id %}">view</a></td>
+              <td>{{ resume_i.name }}</td>
+              <td>{{ resume_i.email }}</td>
+              <td>{{ resume_i.phone }}</td>
+              <td>{{ resume_i.cv_template }}</td>
+              <td>{{ resume_i.created_on }}</td>
+              <td>
+                <a href="{% url 'delete_cv' resume_i.id %}">delete</a>&emsp;
+                <a href="{% url 'download_pdf' resume_i.id %}">download</a>
+              </td>
+            </tr>
+            {% endfor %}
+          </table>    
+    </form>
+</div> 
+</body>
+</html>

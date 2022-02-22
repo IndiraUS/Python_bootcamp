@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Resume Builder Application</title>
+
+  <!-- Load an icon library -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">  
+
+  <!-- Adding Styles -->
+  <style>
+     body{
+            background-color:lightyellow;
+        }
+/* Style the sidebar - fixed full height */
+.sidebar {
+    height: 100%;
+    width: 200px;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:cadetblue;
+    overflow-x: hidden;
+    padding-top: 16px;
+  }
+  
+  /* Style sidebar links */
+  .sidebar a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 50px;
+    color:black;
+    display: block;
+  }
+  
+  /* Style links on mouse-over */
+  .sidebar a:hover {
+    color:antiquewhite;
+  }
+  
+  /* Add media queries for small screens (when the height of the screen is less than 450px, add a smaller padding and font-size) */
+  @media screen and (max-height: 450px) {
+    .sidebar {padding-top: 15px;}
+    .sidebar a {font-size: 18px;}
+  }
+
+  h1{
+    text-align: center;
+  }
+  h3{
+    margin-left: 300px;
+  }
+  h2{
+    margin-left: 250px;
+  }
+ 
+</style>
+</head>
+<body>
+<!-- The sidebar -->
+<div class="sidebar">
+  <a href="{% url 'index' %}"><i class="fa fa-fw fa-home"></i> Home</a>
+  <a href="{% url 'create_cv' %}"><i class="fa fa-fw fa-wrench"></i> Create Resume</a>
+  <a href="{% url 'view_cv_database' %}"><i class="fa fa-fw fa-user"></i> Resume DB</a>
+  <a href="{% url 'contact_developer' %}"><i class="fa fa-fw fa-envelope"></i> Contact</a>
+</div>
+
+<!-- Home Page -->
+<div class="homepage">
+<h1>Welcome to Resume Builder  Application</h1><br>
+<h2>Creating your Resume, Formatting it in a word document, converting into pdf - It's not an easy job.</h2>
+<h2>We are making it an easy job in 2 minutes. It's no more time consuming.</h2>
+
+   <h3>step 1 :  Select the format you want.</h3>
+
+   <h3>step 2 : Give your details.</h3>
+
+   <h3>step 3 : Click on submit.</h3>
+
+    <h2>Done !</h2>
+         
+   <h3>Step 4 : View your Resume Stored in the Data Base.</h3>
+   
+   <h3>Step 5 : Download it in pdf format.</h3>
+
+   <h3>Step 6 : Delete it from the Data Base, if you don't need it later. Simple.....</h3>
+
+<h2>Build Your Resume in 3 different Formats Here, using the same details.</h2>
+   <h3>1. Casual</h3>
+   <h3>2. Formal.</h3>
+   <h3>3. Proffessional</h3>  
+</div>
+
+</body>  
+</body>
+</html>

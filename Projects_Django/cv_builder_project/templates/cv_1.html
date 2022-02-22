@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .form-cv-format {
+            display:flex;
+            justify-content: center;
+        }
+        .button_group button{
+            margin-top: 25px;
+            width: 150px;
+            margin-right: 10px;
+        }
+        .back_link{
+            margin-right: 200px;
+        }
+        .button_group {
+            text-align: center;       
+        }
+    </style>
+    <title>CV template 1</title>
+</head>
+<body>
+<div class="form-cv-format">    
+<form action="">
+{% csrf_token %}    
+<h2>{{ resumes.name }}</h2>
+<h3>{{ resumes.email }}</h3>
+<h3>{{ resumes.phone }}</h3>
+    <br><br><br>
+        <b>Career Objective</b><br>
+        ----------------------------------------
+        <p>{{ resumes.career_objective }}</p>
+        <br><br>
+        <b>Skills</b><br>
+        ----------------------------------------
+        <p>{{ resumes.skills }}</p>
+        <br><br>
+        <b>Experience</b><br>
+        -----------------------------------------
+        <p>{{ resumes.experience }}</p><br>
+        <br><br>
+        <b>Education</b><br>
+        -----------------------------------------
+        <p>{{ resumes.education }}</p><br>
+        <p></p>
+        <b>Address</b><br>
+        -----------------------------------------
+        <p>{{ resumes.address }}</p>
+        <b>Hobbies</b><br>
+        ------------------------------------------- 
+        <p>{{ resumes.hobbies }}</p>
+
+        ***********************************************************************************
+        <div class="button_group">
+            <a class="back_link" href="{% url 'view_cv_database' %}">BACK</a>
+            <button class="button"><a href="">EDIT</a></button>
+            <button class="button"><a href="">DELETE</a></button>
+            <button class="button"><a href="">DOWNLOAD PDF</a></button>
+         </div>
+        </form>
+    </div>
+
+</body>
+</html>
